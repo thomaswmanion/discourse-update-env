@@ -1,5 +1,5 @@
 ENV.keys.select { |k| k =~ /^DISCOURSE_/ }.each { |k| 
-  newname = k[10..-1].downcase.to_sym
+  newname = k[10..-1].downcase
   val = ENV[k]
   puts "Setting " + newname
   GlobalSetting.register(newname, val)
